@@ -19,7 +19,7 @@ Bem-vindo ao frontend do teste técnico da Oncar. Este projeto é responsavel po
 1. Clone o repositório do projeto.
 
 ```bash
-git clone https://github.com/ingridglatz/oncar-challenge.git
+git clone git@github.com:ingridglatz/oncar-challenge.git
 cd oncar-challenge/frontend
 ```
 

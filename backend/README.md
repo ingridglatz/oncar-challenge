@@ -12,11 +12,32 @@ Projeto de teste tecnico para a empresa Oncar, ele tem como objetivo criar uma A
 - PostgreSQL
 - Docker
 
-## Como rodar o projeto
+## Como Rodar o Projeto Localmente
 
-1. Clone o repositório
-2. Instale as dependências com `npm install`
-3. Rode o projeto com `npm run start:dev`
+1. Clone o repositório do projeto.
+
+```bash
+git clone git@github.com:ingridglatz/oncar-challenge.git
+cd oncar-challenge/backend
+```
+
+2. Instale as dependências do projeto.
+
+```bash
+npm install
+```
+
+3. Inicie o projeto.
+
+```bash
+npm run start:dev
+```
+
+4. O Backend estará rodando na porta 4000.
+
+```bash
+http://localhost:4000
+```
 
 ## Variáveis de ambiente
 

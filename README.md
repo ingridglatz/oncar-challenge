@@ -34,7 +34,7 @@ Bem-vindo ao meu teste técnico da Oncar, um projeto para avaliar as habilidades
 
 1. **Clonar o Repositório**:
    ```sh
-   git clone
+   git clone git@github.com:ingridglatz/oncar-challenge.git
    ```
 2. **Executar o Backend**:
    ```sh
