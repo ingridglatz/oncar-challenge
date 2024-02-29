@@ -30,3 +30,13 @@ model Car {
   features Features[]
   image    String?
 }
+
+model Customer {
+  id        Int     @id @default(autoincrement())
+  name      String
+  birthDate String
+  cpf       String
+  income    Int
+  score     Int?
+  credit    String?
+}

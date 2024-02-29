@@ -1,2 +1,2 @@
 export * from './car.repository';
-export * from './prisma.service';
+export * from '../../shared/prisma/prisma.service';

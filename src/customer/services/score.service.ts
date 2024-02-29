@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Customer } from '../domain/entities/customer.entity';
 import { ScoreCalculator } from '../domain/calculators/score.calculator';
 import { CreditCalculator } from '../domain/calculators/credit.calculator';
+import { CustomerRepository } from '../repositories/customer.repository';
 
 type CreateParams = {
   name: string;
@@ -12,11 +13,23 @@ type CreateParams = {
 
 @Injectable()
 export class ScoreService {
-  create({ name, birthDate, cpf, income }: CreateParams) {
-    const customer = new Customer({ name, birthDate, cpf, income });
-    const score = ScoreCalculator.calculate(customer);
-    const message = CreditCalculator.calculate(score);
+  constructor(private readonly customerReporitoy: CustomerRepository) {}
 
-    return { score, message };
+  async create({ name, birthDate, cpf, income }: CreateParams) {
+    const score = ScoreCalculator.calculate();
+    const credit = CreditCalculator.calculate(score);
+
+    let customer = new Customer({
+      name,
+      birthDate,
+      cpf,
+      income,
+      score,
+      credit,
+    });
+
+    customer = await this.customerReporitoy.create(customer);
+
+    return customer;
   }
 }
