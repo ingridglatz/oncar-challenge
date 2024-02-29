@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <Container>
         <Typography variant="body1" mt={4} sx={{ color: '#666', fontSize: '1rem', fontWeight: 'bold' }}>
-          2.000 carros encontrados
+          {cars?.length || 0} carros encontrados
         </Typography>
         <Stack paddingBottom={10} mt={4} direction="row" flexWrap="wrap" alignItems="flex-start" gap={2}>
           {cars.map((car) => (
