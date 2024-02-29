@@ -53,6 +53,9 @@ Bem-vindo ao meu teste técnico da Oncar, um projeto para avaliar as habilidades
 
 Dentro de cada diretório (backend e frontend) você encontrará um arquivo chamado `README.md` com informações adicionais sobre o projeto.
 
+- Link [Backend](https://oncar-challenge-be0740413b49.herokuapp.com/)
+- Link [Frontend](https://oncar-challenge.vercel.app/)
+
 ## Dúvidas e Contato
 
 Se você tiver alguma dúvida sobre o desafio, entre em contato comigo pelo e-mail: ingridilario@outlook.com.
