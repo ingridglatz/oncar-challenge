@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from './prisma.service';
+import { PrismaService } from '../../shared/prisma/prisma.service';
 import { Car } from '../domain/entities';
 import { Features } from '../domain/enums/features.enum';
 
@@ -8,7 +8,7 @@ export class CarRepository {
   constructor(private prisma: PrismaService) {}
 
   async list(): Promise<Car[]> {
-    const cars = await this.prisma.car.findMany({ orderBy: { id: 'asc' } });
+    const cars = await this.prisma.car.findMany({ orderBy: { id: 'desc' } });
     return cars.map((car) => {
       const { features, ...rest } = car;
       return new Car({ ...rest, features: features as Features[] });

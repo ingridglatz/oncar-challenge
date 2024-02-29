@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Customer" ALTER COLUMN "score" DROP NOT NULL,
+ALTER COLUMN "credit" DROP NOT NULL;

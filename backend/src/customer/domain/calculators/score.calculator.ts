@@ -1,7 +1,5 @@
-import { Customer } from '../entities/customer.entity';
-
 export class ScoreCalculator {
-  static calculate(customer: Customer) {
+  static calculate() {
     const score = Math.floor(Math.random() * 999);
     return score;
   }

@@ -1,12 +1,13 @@
-import '@/styles/globals.css';
-import { LocalizationProvider } from '@mui/x-date-pickers';
 import type { AppProps } from 'next/app';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+
+import '@/styles/globals.css';
+import { OAppBar } from '@/components/OAppBar';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="pt-br">
+    <>
+      <OAppBar />
       <Component {...pageProps} />
-    </LocalizationProvider>
+    </>
   );
 }
