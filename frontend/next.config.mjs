@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'oncar-challenge-be0740413b49.herokuapp.com'],
   },
 };
 
